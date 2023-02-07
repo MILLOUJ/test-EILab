@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+.header {
+    display: inline-flex;
+    &_link {
+        justify-content: space-between;
+    }
+}
