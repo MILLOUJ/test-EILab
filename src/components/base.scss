@@ -2,16 +2,114 @@
     font-family: 'Open Sans', sans-serif;
     src: url(../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
-*{
+
+* {
+
     font-family: 'Open Sans', sans-serif;
 }
+
 h1 {
     text-align: center;
 }
 
-.header {
+.menu {
+    width: 100%;
     display: inline-flex;
-    &_link {
-        justify-content: space-between;
+    justify-content: center;
+    padding: 30px;
+    background-color: #E8E7E7;
+
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+        margin: 0 5px;
+
+        &.router-link-exact-active {
+            color: #42b983;
+        }
+    }
+}
+
+
+
+.header {
+    width: 100%;
+    background-color: #E8E7E7;
+
+    &_container {
+        width: 100%;
+        margin: 10px 20px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.5rem;
+        display: inline-flex;
+        justify-content: space-evenly;
+
+        &-statistic {
+            display: inline-flex;
+            align-items: center;
+
+            &-img {
+                width: 32px;
+                height: 32px;
+            }
+
+            &-text {
+                font-size: 0.75rem;
+                color: #9b9b9b;
+            }
+
+            &-count {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    /* Убираем границу для браузера Firefox */
+    color: #E8E7E7;
+    /* Цвет линии для остальных браузеров */
+    background-color: #E8E7E7;
+    /* Цвет линии для браузера Firefox и Opera */
+    height: 1px;
+}
+
+.form {
+    display: grid;
+    grid-auto-flow: column;
+
+    &_input {
+        box-sizing: border-box;
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                border: 1.5px solid #E8E7E7;
+                width: 1em;
+                height: 1em;
+                flex-shrink: 0;
+                flex-grow: 0;
+                margin-right: 0.5em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+
+            &:checked {
+                border-color: #0b76ef;
+                background-color: #0b76ef;
+            }
+        }
     }
 }

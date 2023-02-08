@@ -1,22 +1,20 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <Table></Table>
-    <RouterView/>
-  </div>
+  <div style="overflow-x:hidden">
+  <nav class="menu">
+    <router-link to="/">Таблица</router-link>
+    <router-link to="/layout">Вёрстка</router-link>
+  </nav>
+</div>
+  <router-view/>
 </template>
 
-<script>
-import Table from './components/Table.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Table
-  }
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</script>
-
-<style>
 
 </style>

@@ -3,21 +3,19 @@
         <h1>Таблица</h1>
         <ag-grid-vue class="ag-theme-alpine" :columnDefs="columnDefs.value" :rowData="rowData.value">
         </ag-grid-vue>
-        <a href="/layout">Вёрстка</a>
     </div>
 </template>
 
 <script>
 import { AgGridVue } from 'ag-grid-vue3';
 import { reactive, onMounted } from 'vue';
-
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Тема таблицы (+ необходимо поменять класс)
 
 export default {
     name: 'Table',
     components: {
-        AgGridVue
+        AgGridVue,
     },
     setup() {
         const rowData = reactive({
