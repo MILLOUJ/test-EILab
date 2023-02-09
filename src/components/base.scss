@@ -18,7 +18,7 @@ h1 {
     width: 100%;
     display: inline-flex;
     justify-content: center;
-    padding: 24px 0;
+    padding: 24px 0 4px;
     background-color: #E8E7E7;
 
     a {
@@ -81,15 +81,7 @@ h1 {
             }
         }
     }
-    &:after {
-        content: '';
-        display: block;
-        height: 1px;
-        background: #E8E7E7;
-        position: relative;
-        left: 130px;
-        margin: 24px 10px 8px;
-    }
+
 }
 
 .form {
@@ -98,6 +90,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #9b9b9b;
 
 
     &_input {
@@ -106,7 +99,7 @@ h1 {
         z-index: -1;
         opacity: 0;
 
-       
+
 
         &+label {
             display: inline-flex;
@@ -121,8 +114,10 @@ h1 {
                 height: 16px;
                 margin-right: 10px;
                 cursor: pointer;
+                transition: all 0.2s ease;
             }
         }
+
         &:checked+label::before {
             left: 3px;
             top: 4px;
@@ -151,25 +146,40 @@ h1 {
 
 .description {
     position: relative;
-    left: -130px;
+    text-align: left;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
-    &:before {
-        content: '';
-        display: block;
-        height: 1px;
-        background: #E8E7E7;
-        position: relative;
-        left: 130px;
-        margin: 8px 10px 24px;
-    }
+    border-bottom: 1px solid #42b983;
+    border-top: 1px solid #42b983;
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     height: 1px;
+    //     background: #E8E7E7;
+    //     position: relative;
+    //     left: 130px;
+    //     margin: 8px 10px 24px;
+    // }
 
-    &:after {
-        content: '';
-        display: block;
-        height: 1px;
-        background: #E8E7E7;
-        position: relative;
-        left: 130px;
-        margin: 24px 10px 8px;
-    }
+    // &:after {
+    //     content: '';
+    //     display: block;
+    //     height: 1px;
+    //     background: #E8E7E7;
+    //     position: relative;
+    //     left: 130px;
+    //     margin: 24px 10px 8px;
+    // }
 }
+
+// .TEST {
+//     .container {
+//        &:not(:first-child) {
+//         .form {
+//             border-top: none;
+//         }
+//        }
+//     }
+// }

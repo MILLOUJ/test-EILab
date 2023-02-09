@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="TEST">
         <LayoutHeader></LayoutHeader>
         <LHCheckbox></LHCheckbox>
         <LHCheckbox></LHCheckbox>

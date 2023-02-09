@@ -1,10 +1,9 @@
 <template>
     <div class="container">
         <div class="form">
-            <input class="form_input" type="checkbox" name="check">
-            <label for="name">Заполните информацию о компании</label>
+            <input class="form_input" type="checkbox" id="check">
+            <label for="check">Заполните информацию о компании</label>
             <button class="form_input-btn"><span class="form_input-btn-text">Перейти</span></button>
-
         </div>
         <div class="description">Это создаст более привлекательный образ компании и позволит вашим сотрудникам
             убедиться,
