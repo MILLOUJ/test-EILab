@@ -2,9 +2,8 @@
     <div>
         <h1>Таблица</h1>
         <ag-grid-vue @grid-ready="onGridReady" class="ag-theme-alpine" :columnDefs="columnDefs" :rowData="rowData"
-            :groupHeaderHeight="groupHeaderHeight" :headerHeight="headerHeight"
-            :floatingFiltersHeight="floatingFiltersHeight" :pivotGroupHeaderHeight="pivotGroupHeaderHeight"
-            :pivotHeaderHeight="pivotHeaderHeight">
+            :headerHeight="headerHeight"
+            >
         </ag-grid-vue>
     </div>
 </template>
@@ -24,11 +23,8 @@ export default {
         return {
             columnDefs: [
                 {
-                    headerName: "Фамилия Имя Отчество", children: [
-                        { field: "questionnaire.last_name" },
-                        { field: "questionnaire.first_name" },
-                        { field: "questionnaire.patronymic" }
-                    ]
+                    headerName: "Фамилия Имя Отчество", valueGetter: this.fullNameGetter,
+                    field: "last_name&first_name&patronymic"
                 },
                 { headerName: "Статус", field: "status" },
                 { headerName: "Дата прохождения", field: "finished_at" },
@@ -49,19 +45,8 @@ export default {
             rowData: null,
         };
     },
-    // methods: {
-    //     onGridReady(params) {
-    //         this.gridApi = params.api;
-    //         this.gridApi.setHeaderHeight(0)
-
-    //     }
-    // },
     created() {
-        this.groupHeaderHeight = 50;
-        this.headerHeight = 5;
-        this.floatingFiltersHeight = 50;
-        this.pivotGroupHeaderHeight = 50;
-        this.pivotHeaderHeight = 100;
+        this.headerHeight = 40;
     },
     methods: {
         onGridReady(params) {
@@ -74,36 +59,16 @@ export default {
                 .then((resp) => resp.json())
                 .then((data) => updateData(data));
         },
+        
+        fullNameGetter(params) {
+            if (params.data.questionnaire == null) {
+                return " "
+            } else {
+            return params.data.questionnaire.last_name + " " + 
+            params.data.questionnaire.first_name + " " + params.data.questionnaire.patronymic;
+            }
+        },
     },
-    // setup() {
-    //     const rowData = reactive({
-    //         value: [{}]
-    //     });
-    //     const columnDefs = reactive({
-    //         value: [
-    //             {
-    //                 headerName: "Фамилия Имя Отчество", children: [
-    //                     { field: "questionnaire.last_name" },
-    //                     { field: "questionnaire.first_name" },
-    //                     { field: "questionnaire.patronymic" }
-    //                 ]
-    //             },
-    //             { headerName: "Статус", field: "status" },
-    //             { headerName: "Дата прохождения", field: "finished_at" },
-    //             { headerName: "Тип отчета", field: "report_type" }
-    //         ]
-    //     });
-    //     onMounted(() => {
-    //         fetch("https://ei-adult.way2wei.space/response.json")
-    //             .then((result) => result.json())
-    //             .then((newRowData) => (rowData.value = newRowData));
-    //     },
-    //     )
-    //     return {
-    //         columnDefs,
-    //         rowData,
-    //     }
-    // }
 }
 </script>
 

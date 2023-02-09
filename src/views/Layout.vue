@@ -1,15 +1,19 @@
 <template>
-    <div style="overflow-x:hidden">
+    <div>
         <LayoutHeader></LayoutHeader>
+        <LHCheckbox></LHCheckbox>
+        <LHCheckbox></LHCheckbox>
     </div>
 </template>
 
 <script>
 import LayoutHeader from '../components/LayoutHeader'
+import LHCheckbox from '../components/LHCheckbox'
 export default {
     name: 'Layout',
     components: {
-        LayoutHeader
+        LayoutHeader,
+        LHCheckbox
     }
 }
 </script>
