@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<style>.cls-1{fill:none;stroke:#020202;stroke-linecap:square;stroke-miterlimit:10;stroke-width:1.91px;}</style>
-</defs>
-<g id="bank">
-<polygon class="cls-1" points="22.5 6.27 22.5 9.14 1.5 9.14 1.5 6.27 12 1.5 22.5 6.27"/>
-<rect class="cls-1" x="1.5" y="18.68" width="21" height="3.82"/>
-<line class="cls-1" x1="3.41" y1="9.14" x2="3.41" y2="18.68"/>
-<line class="cls-1" x1="9.14" y1="9.14" x2="9.14" y2="18.68"/>
-<line class="cls-1" x1="14.86" y1="9.14" x2="14.86" y2="18.68"/>
-<line class="cls-1" x1="20.59" y1="9.14" x2="20.59" y2="18.68"/>
-</g>
-</svg>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 21.0002H21M6 18.0002V10.0002M10 18.0002V10.0002M14 18.0002V10.0002M18 18.0002V10.0002M20 7.00022L12.424 2.26522C12.2702 2.16908 12.1933 2.12102 12.1108 2.10227C12.0379 2.0857 11.9621 2.0857 11.8892 2.10227C11.8067 2.12102 11.7298 2.16908 11.576 2.26522L4 7.00022H20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

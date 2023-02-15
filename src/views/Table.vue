@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <h1>Таблица</h1>
+    <div class="table">
         <ag-grid-vue @grid-ready="onGridReady" class="ag-theme-alpine" :columnDefs="columnDefs" :rowData="rowData"
-            :headerHeight="headerHeight"
-            >
+            :headerHeight="headerHeight">
         </ag-grid-vue>
     </div>
 </template>
