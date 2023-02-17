@@ -10,11 +10,24 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 .table{
 display: inline-flex;
 justify-content: center;
-max-width: 800px;
 width: 100%;
+padding-top: 90.39px;
+background-color: #E8E7E7;
+}
+
+.ag-theme-alpine {
+    font-size: 16px;
+    height: 100vh;
+    width: 800px;
+}
+
+.ag-center-cols-container{
+    width: 100vw !important;
 }
 
 h1 {
@@ -28,7 +41,7 @@ h1 {
     padding: 24px 0 4px;
     background-color: #E8E7E7;
 
-    a {
+    .link {
         padding: 5px;
         background-color: #ffffff;
         border-radius: 0.25rem;
@@ -36,6 +49,11 @@ h1 {
         font-weight: bold;
         color: #2c3e50;
         margin: 0 5px;
+        transition: all .2s ease-in;
+        &:hover {
+            background-color: #2c3e50;
+            color: #fff;
+        }
 
         &.router-link-exact-active {
             background-color: #42b983;
@@ -144,18 +162,13 @@ h1 {
             cursor: pointer;
 
             &:hover {
-                border: 1px solid #42b983;
-                background-color: #E8E7E7;
-                padding: 9px;
+                background-color: #2c3e50;
+                color: #fff;
             }
 
             &-text {
                 color: rgb(255, 255, 255);
                 font-weight: 300 !important;
-
-                &:hover {
-                    color: #42b983;
-                }
             }
 
         }
@@ -185,6 +198,7 @@ h1 {
         position: absolute;
         z-index: -1;
         opacity: 0;
+        
 
         &+label {
             display: inline-flex;
@@ -205,7 +219,6 @@ h1 {
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: 50% 50%;
-                transition: image .1s ease-in-out;
             }
         }
 
@@ -226,18 +239,13 @@ h1 {
             cursor: pointer;
 
             &:hover {
-                border: 1px solid #42b983;
-                background-color: #E8E7E7;
-                padding: 9px;
+                background-color: #2c3e50;
+                color: #fff;
             }
 
             &-text {
                 color: rgb(255, 255, 255);
                 font-weight: 300 !important;
-
-                &:hover {
-                    color: #42b983;
-                }
             }
 
         }
@@ -254,3 +262,4 @@ h1 {
     border-top: 1px solid #E8E7E7;
     color: #959595;
 }
+

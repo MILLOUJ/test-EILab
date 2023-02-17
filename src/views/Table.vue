@@ -45,6 +45,7 @@ export default {
     },
     created() {
         this.headerHeight = 40;
+        
     },
     methods: {
         onGridReady(params) {
@@ -56,23 +57,17 @@ export default {
             fetch('https://ei-adult.way2wei.space/response.json')
                 .then((resp) => resp.json())
                 .then((data) => updateData(data));
+
         },
         
         fullNameGetter(params) {
             if (params.data.questionnaire == null) {
                 return " "
             } else {
-            return params.data.questionnaire.last_name + " " + 
-            params.data.questionnaire.first_name + " " + params.data.questionnaire.patronymic;
+                return params.data.questionnaire.last_name + " " +
+                    params.data.questionnaire.first_name + " " + params.data.questionnaire.patronymic;
             }
         },
     },
 }
 </script>
-
-<style>
-.ag-theme-alpine {
-    height: 100vh;
-    width: 100%;
-}
-</style>

@@ -1,8 +1,8 @@
 <template>
   <div style="overflow-x:hidden">
   <nav class="menu">
-    <router-link to="/">Таблица</router-link>
-    <router-link to="/layout">Вёрстка</router-link>
+    <router-link to="/" class="link">Таблица</router-link>
+    <router-link to="/layout" class="link">Вёрстка</router-link>
   </nav>
 </div>
   <router-view/>
